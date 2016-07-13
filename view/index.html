@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title\</title>
+    <script src="../lib/angular.min.js"><!-- --></script>
+    <script src="../app/application.js"><!-- --></script>
+    <script src="../app/controller/IndexController.js"><!-- --></script>
+    <script src="../app/componets/directives.js"><!-- --></script>
+</head>
+<body ng-app="myApp">
+    <grid-screen resource="../data/data.json">
+        <grid-columns>
+            <grid-column title="Person" field="product"/>
+            <grid-column title="Description" field="description"/>
+            <grid-column title="Cost" field="cost"/>
+        </grid-columns>
+        <grid with-inline-editor></grid>
+    </grid-screen>
+
+    <div ng-controller="IndexCtrl">
+        <p ng-copy="copied=true">
+            To jest tekst do skopiowania
+        </p>
+        <textarea ng-cut="cuted=true">
+            To jest tekst do wyciecia
+        </textarea>
+        <div>Czy tekst zostal skopiowany: {{copied}}</div>
+        <div>Czy tekst zostal wyciety: {{cuted}}</div>
+
+        <a ng-href="http://wp.pl/page={{pageToWp}}">Link do wp</a>
+            <br/><br/>
+        <label>Podaj samochod<input type="text" ng-model="samochod"/></label>
+        <div ng-repeat="s in samochody | filter: samochod">{{$index}} - {{s | samochodUpperCase}} {{$last}}</div>
+
+        <br/>
+        <input type="text" ng-model="samochody" ng-list="@ " size="50"/>
+
+        <br/>
+        <input ng-model="testtext"/>
+        <div>{{testtext}}</div>
+        <div ng-non-bindable="">{{testtext}}</div>
+
+        <div ng-switch="" data-on="testtext">
+            <div ng-switch-when="test">testowy napios</div>
+            <div ng-switch-default="">Nie pasuje do wybranych</div>
+        </div>
+        <br/>
+        <br/>
+        <div>
+            <select ng-model="wybranySamochod" ng-options="s as s.marka + ' (' + s.model + ')'  group by s.kolor  for s in auta"></select>
+        </div>
+        <div>wybrany samochod : {{wybranySamochod}}</div>
+    </div>
+</body>
+</html>

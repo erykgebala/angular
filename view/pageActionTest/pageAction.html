@@ -1,0 +1,8 @@
+<div>
+    <div ng-repeat="e in elements track by $index" style="float: left">
+        <button id="btn-{{e.key}}"  ng-show="e.visible" class="actionBtn visible" style="padding: 5px 10px; background-color:cadetblue;color:#fff; border:none;margin-right: 10px">{{e.label}}</button>
+    </div>
+    <select ng-show="isActive" style="float:left;width: 80px">
+        <option ng-show="e.visible" ng-repeat="e in selectElements track by $index">{{e.label}}</option>
+    </select>
+</div>

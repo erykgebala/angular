@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div>
+            <figure>
+                <img src="{{image}}"/>
+                <figcaption>{{name}}</figcaption>
+            </figure>
+        </div>
+    </div>
+    <div> Select move type:
+        <select ng-model="movetype"
+                ng-options="movetype for movetype in movetypes">
+        </select>
+    </div>
+    <div>
+        Move:
+        <input type="text" ng-model="value" class="form-control"/>
+    </div>
+    <div class="panel-footer clearfix">
+        <div class="btn btn-primary" ng-click="useMove({name:name, movetype:movetype,
+                move:value})">
+                Action!
+        </div>
+    </div>
+</div>

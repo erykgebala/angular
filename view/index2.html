@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title\</title>
+    <script src="../lib/angular.min.js"><!-- --></script>
+    <script src="../lib/angular-route.min.js"><!-- --></script>
+    <script src="../lib/angular-ui-router.js"><!-- --></script>
+    <script src="../app/application.js"><!-- --></script>
+    <script src="../app/controller/Index2Controller.js"><!-- --></script>
+    <script src="../app/componets/directives2.js"><!-- --></script>
+    <script src="../app/service/StateService.js"><!-- --></script>
+    <script src="../app/componets/breadcrumb.js"><!-- --></script>
+</head>
+<body ng-app="myApp">
+    <grid-screen resource="../data/data.json">
+        <grid-columns>
+            <grid-column title="Person" field="product"/>
+            <grid-column title="Description" field="description"/>
+            <grid-column title="Cost" field="cost"/>
+        </grid-columns>
+        <grid with-inline-editor></grid>
+    </grid-screen>
+
+    <div ng-controller="IndexCtrl">
+        <!--{{wynik}}
+        <br/>
+        {{wynikSerwisu}}
+
+        <br/>
+        ::::
+        <div>{{testowawartosc}}</div>
+-->
+        <breadcrumb></breadcrumb>
+        Menu
+        <ul>
+            <li><a href="#" ng-click="go('abc')">Glowna</a></li>
+            <li><a href="#" ng-click="go('abc.dupa')">Dupa</a></li>
+            <li><a href="#" ng-click="go('abc2')">Druga</a></li>
+            <li><a href="#" ng-click="go('abc3')">Trzecia</a></li>
+        </ul>
+
+        <div ui-view></div>
+
+        <br/>
+        <!--<color-changer></color-changer>
+        <color-changer-two></color-changer-two>-->
+    </div>
+</body>
+</html>

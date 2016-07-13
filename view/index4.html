@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title\</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"/>
+
+    <script src="../lib/angular.min.js"><!-- --></script>
+    <script src="../lib/angular-route.min.js"><!-- --></script>
+    <script src="../app/application.js"><!-- --></script>
+    <script src="../app/controller/Index3Controller.js"><!-- --></script>
+</head>
+<body >
+    <div class="mainController" ng-app="isolatedApp">
+        <div ng-controller="IndexCtrl">
+            <div class="row">
+                <character name="Roman Reigns"
+                           image="/AngularFun/resources/img/reigns.png"
+                           movetype="movetype"
+                           use-move="getMove(name, movetype, move)"
+                           class="col-xs-4"></character>
+                <character name="Seth Rollins"
+                           image="/AngularFun/resources/img/rollins.png"
+                           movetype="movetype"
+                           use-move="getMove(name, movetype, move)"
+                           class="col-xs-4"></character>
+                <character name="Dean Ambers"
+                           image="/AngularFun/resources/img/ambers.png"
+                           movetype="movetype"
+                           use-move="getMove(name, movetype, move)"
+                           class="col-xs-4"></character>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title\</title>
+    <script src="../lib/angular.min.js"><!-- --></script>
+    <script src="../lib/angular-route.min.js"><!-- --></script>
+    <script src="../app/application.js"><!-- --></script>
+    <script src="../app/controller/Index2Controller.js"><!-- --></script>
+    <script src="../app/componets/directives1.js"><!-- --></script>
+</head>
+<body ng-app="myApp">
+    <grid-screen resource="../data/data.json">
+        <grid-columns>
+            <grid-column title="Person" field="product"/>
+            <grid-column title="Description" field="description"/>
+            <grid-column title="Cost" field="cost"/>
+        </grid-columns>
+        <grid with-inline-editor></grid>
+    </grid-screen>
+
+    <div ng-controller="IndexCtrl">
+        <div>testowa wartosc z kontrolera: {{testowawartosc}}</div>
+        zmiana z kontroleta: <input ng-model="config.test" />
+        {{config.test}}
+        <first-changer config="config"></first-changer>
+
+        <theshield reigns rollins ambrose>asdasda</theshield>
+
+        <theshield reigns>zxczxczx</theshield>
+    </div>
+</body>
+</html>

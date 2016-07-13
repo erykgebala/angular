@@ -1,0 +1,17 @@
+[
+    {
+      "product": "Telewizor Sony",
+      "description": "Testowy opis telewizora sony",
+      "cost": 2000
+    },
+    {
+      "product": "Konsola Xbox",
+      "description": "Testowy opis konsoli xbox",
+      "cost": 1750
+    },
+    {
+      "product": "Telefon Nokia",
+      "description": "Testowy opis telefonu nokia",
+      "cost": 1200
+    }
+]
