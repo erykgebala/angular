@@ -33,7 +33,7 @@ app.controller("page1Ctrl", function($scope){
     $scope.pokazNoweAkcje = function () {
         $scope.actions.push({
             key: 5,
-            label: "Huj w dupsko",
+            label: "Testowy",
             visible: true
         })
     }
